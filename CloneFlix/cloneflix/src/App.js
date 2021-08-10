@@ -1,2 +1,11 @@
-import React, { useEffect } from 'react';
-import MoviesDB from './MoviesDB';
+import React from 'react';
+
+
+export default () => {
+
+  return (
+    <div>
+      Relembrando React!!
+    </div>
+  )
+}
