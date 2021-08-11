@@ -7,15 +7,6 @@ const fetchMovies = async (endpoint) => {
   return json;
 }
 
-// const fetchMovies = (endpoint) => (
-//   fetch(`${API_BASE}${endpoint}`).then((response) => (
-//     response
-//     .json()
-//     .then((json) => (
-//       response.ok ? Promise.resolve(json) : Promise.reject(json)))
-//   ))
-// );
-
 // Data used from the website https://www.themoviedb.org/settings/api
 export default {
     getHomeMovies: async () => {
@@ -63,3 +54,12 @@ export default {
       ];
     }
 }
+
+// const fetchMovies = (endpoint) => (
+//   fetch(`${API_BASE}${endpoint}`).then((response) => (
+//     response
+//     .json()
+//     .then((json) => (
+//       response.ok ? Promise.resolve(json) : Promise.reject(json)))
+//   ))
+// );
