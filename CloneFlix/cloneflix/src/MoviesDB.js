@@ -52,8 +52,27 @@ export default {
           items: await fetchMovies(`/discover/movie?with_genres=99&language=us&api_key=${API_KEY}`)
         },
       ];
+    },
+    // getting especific info about especif movie
+    getMovieInfo: async(movieId, type) => {
+      let info = {};
+        if(movieId) {
+          switch(type) {
+            case 'movie':
+                info = await fetchMovies(`/movie/${movieId}?language=pt-BR&api_key=${API_KEY}`);
+            break;
+            case 'tv':
+              info = await fetchMovies(`/tv/${movieId}?language=pt-BR&api_key=${API_KEY}`);
+            break;
+            default:
+              info = undefined;
+            break;
+          }
+        }
+        return info;
     }
 }
+
 
 // const fetchMovies = (endpoint) => (
 //   fetch(`${API_BASE}${endpoint}`).then((response) => (
