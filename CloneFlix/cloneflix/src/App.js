@@ -21,7 +21,7 @@ export default () => {
       let originalChosen = originals[0].items.results[randonFeatureMovie];
       // console.log(originalChosen)
       let chosenInfo = await MoviesDB.getMovieInfo(originalChosen.id, 'tv');
-      // console.log(chosenInfo)
+      console.log(chosenInfo)
       setFeatureData(chosenInfo);
     }
 
